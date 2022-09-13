@@ -1,0 +1,101 @@
+:root{
+    --main-color:rgba(72, 202, 228, 1);
+    --main-color-light:rgba(72, 202, 228, 0.2);
+    --accent-color:rgba(247, 127, 0, 1);
+    --accent-color-light:rgba(247, 127, 0, 0.5);
+    --btn-color:rgba(144, 190, 109, 1);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image:linear-gradient(to bottom right,var(--main-color),var(--main-color-light));
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.main-title{
+    font-size: 2rem;
+    color: white;
+}
+.header, .gorev-form{
+    min-height: 20vh; /*ekranın %20 yüksekliğinde olsun dedik.*/
+    margin: 0.5rem;/*Not sepeti yazısı ile form(textbox ve button) araında tüm kenarlardan 1rem boşluk verdik*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-item{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background-color: white;
+    outline: none;
+}
+.btn-gorev-ekle{
+    color: var(--accent-color);
+    cursor: pointer;
+}
+.btn-gorev-ekle:hover{
+    color: white;
+    background-color: var(--accent-color);
+}
+.gorev-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gorev-listesi{
+    list-style: none;
+    min-width: 50%; /*o anki ekranın %50'sini kapla*/
+    
+}
+.gorev-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    background-color: white;
+    transition: 0.3s ease-in-out; /*Bu sınıf Div'i kapsıyor.Bu yapı ile Div'e(yani satıra) efekt verdik geçiş yavaş şekilde oluyor
+    hem ortaya gelişi(divlerin) hemde gorev tamamladı sınıfında opacity çalıştığında yavaş şekilde gerçekleşiyor.
+    */
+}
+.gorev-tanim{
+    flex: 1;
+    padding: 0.5rem;
+}
+.gorev-btn{
+    background-color: var(--accent-color);
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.6rem;
+    color: white;
+}
+.gorev-btn-tamamlandi:hover{
+    color: white;
+    background-color: var(--btn-color);
+}
+.gorev-btn-sil{
+    background-color: rgba(230, 57, 70, 1)
+}
+.gorev-btn-sil:hover{
+    color: rgba(230, 57, 70, 1);
+    background-color: white;
+}
+.gorev-tamamlandi{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fa-regular{
+    pointer-events: none;
+}
+.gorevSilKaybolma{
+    transform: scale(0);/*sil butonu tıklandığında ortaya doğru küçülerek kaybolma efekti verdik.*/
+}
