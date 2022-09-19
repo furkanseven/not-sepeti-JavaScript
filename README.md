@@ -1,4 +1,4 @@
-# not-sepeti-JavaScript
+# Todo-JavaScript
 Not ekleme,silme,yapıldı olarak işaretleme ve local storage kayıt etme.
 
 
